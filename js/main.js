@@ -23,8 +23,10 @@ function validateOperationByActivationCode(operationFunc, operationFuncInvokingD
 	
 	showInputDialog("输入激活码", "此操作需要激活码才能继续，请输入激活码。\n激活码的格式:\nXXXXXXXX-XXXX-XXXX-XXXX-XXXXXX",
 		function (inputedActivationCode) {
+			parseActivationCodeUsageStateMapFromLocalFile()
+			
 			// 清空输入框。
-			$("#dialog_input").val("");
+			//$("#dialog_input").val("");
 			
 			activationCodeUsageStateMap.forEach(function (item, key, mapObj) {
 				if (item) {

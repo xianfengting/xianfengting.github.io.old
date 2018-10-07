@@ -14,11 +14,27 @@
 		
 		<!-- JS -->
 		<script src="js/main.js"></script>
+		
+		<!-- 临时 style 区域 -->
+		<style>
+			#draggable { width: 150px; height: 150px; padding: 0.5em; }
+		</style>
+		
+		<!-- 临时 JS 区域 -->
+		<script>
+			$(function () {
+				$("#draggable").draggable();
+			});
+		</script>
 	</head>
     <body>
          <p>欢迎来到 xianfengting个人主页</p>
 		 <p>本主页正在开发中</p>
 		 <input type="text" name="date" id="date" />
+		 
+		 <div id="draggable" class="ui-widget-content">
+			<p>请拖动我！</p>
+		</div>
     </body>
 </html>
 

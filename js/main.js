@@ -21,7 +21,7 @@ function validateOperationByActivationCode(operationFunc, operationFuncInvokingD
 	__last_operationFunc = operationFunc;
 	__last_operationFuncInvokingDelay = operationFuncInvokingDelay;
 	
-	showInputDialog("输入激活码", "此操作需要激活码才能继续，请输入激活码。\n激活码的格式:\nXXXXXXXX-XXXX-XXXX-XXXX-XXXXXX",
+	showInputDialog("输入激活码", "此操作需要激活码才能继续，请输入激活码。\n激活码的格式:\nXXXXXXXX-XXXX-XXXX-XXXX-XXXXXX（注意中间有“-”，如果不输“-”的话则无效）",
 		function (inputedActivationCode) {
 			parseActivationCodeUsageStateMapFromLocalFile()
 			

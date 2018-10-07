@@ -1,2 +1,4 @@
 
-$("#date").datepicker();
+$(function () {
+	$("#date").datepicker();
+});

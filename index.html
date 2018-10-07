@@ -13,6 +13,8 @@
 		<script src="js/apis/jquery/jquery-ui/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 		
 		<!-- JS -->
+		<script src="js/dialog.js"></script>
+		<script src="js/activations.js"></script>
 		<script src="js/main.js"></script>
 		
 		<!-- 临时 style 区域 -->
@@ -24,6 +26,7 @@
 		<!-- 临时 JS 区域 -->
 		<script>
 			$(function () {
+				
 				$("#draggable").draggable();
 				$("#draggable").resizable({animate: true});
 				$("#droppable").draggable();
@@ -37,12 +40,26 @@
 					}
 				});
 			});
+			
+			function openDialogButton_onclick() {
+				$(function () {
+					$("#dialog").dialog("open");
+				});
+			}
 		</script>
 	</head>
     <body>
+		<!-- 对话框 div  -->
+		<div id="dialog" title=" ">
+			<p id="dialog_message"> </p>
+			<input id="dialog_input" type="text" />
+		</div>
+		
         <p>欢迎来到 xianfengting个人主页</p>
 		<p>本主页正在开发中</p>
 		<input type="text" name="date" id="date" />
+		
+		<input id="openDialogButton" type="button" value="打开对话框" onclick="validateOperationByActivationCode(function(){showInputDialog('title', 'message', function(text){alert('inputed:'+text)})},1000)" />
 		
 		<div id="draggable" class="ui-widget-content">
 			<p>把我拖到目标位置！</p>

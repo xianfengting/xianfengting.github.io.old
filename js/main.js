@@ -2,3 +2,4 @@
 $(function () {
 	$("#date").datepicker();
 });
+

@@ -1,10 +1,22 @@
 [
 	{
 		"activationCode": "F89C3228-F4B2-44e4-0090-00004E",
-		"isUsed": false
+		"isUsed": true
 	},
 	{
 		"activationCode": "A9163F20-61C9-467d-0089-00005E",
+		"isUsed": false
+	},
+	{
+		"activationCode": "5370FE67-34FB-4ac7-009F-0000D6",
+		"isUsed": false
+	},
+	{
+		"activationCode": "0E64F619-BDC6-4193-00AC-0000CF",
+		"isUsed": false
+	},
+	{
+		"activationCode": "5F993909-2446-4c2c-00B6-000057",
 		"isUsed": false
 	}
 ]

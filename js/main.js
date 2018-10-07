@@ -27,7 +27,11 @@ function validateOperationByActivationCode(operationFunc, operationFuncInvokingD
 			$("#dialog_input").val("");
 			
 			activationCodeUsageStateMap.forEach(function (item, key, mapObj) {
-				if (!item) {
+				if (item) {
+					if (key.toString() == inputedActivationCode.toString()) {
+						alert("查询到你输入的激活码“" + key + "”已被使用或被禁止使用，所以无法使用此激活码进行激活。");
+					}
+				} else {
 					if (key.toString() == inputedActivationCode.toString()) {
 						__last_isActivationCompletedSuccessfully = true;
 						setTimeout("showDialogWithOKButton('激活','激活成功！点击“确定”按钮继续。',function(){setTimeout('__last_operationFunc()',__last_operationFuncInvokingDelay)});", 1000);
@@ -44,7 +48,7 @@ function validateOperationByActivationCode(operationFunc, operationFuncInvokingD
 			}*/
 			
 			if (!__last_isActivationCompletedSuccessfully) {
-				setTimeout("showDialog('激活', '激活失败，原因:未找到激活码以适用于你输入的激活码“" + inputedActivationCode + "”。操作无法继续。');", 1000);
+				setTimeout("showDialog('激活', '激活失败，原因:无法使用激活码“" + inputedActivationCode + "”进行激活。操作无法继续。');", 1000);
 			}
 		});
 }
